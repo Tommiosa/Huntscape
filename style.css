@@ -13,7 +13,7 @@ body {
       position: relative;
       width: 100%;
       height: 75vh;
-      background: url('/mnt/data/hunting-for-beginners-lead_h.png') center/cover no-repeat;
+      background: url('hunter.png') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
