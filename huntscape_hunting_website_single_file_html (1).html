@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hans Martin – Jaktopplevelse</title>
+  <meta name="description" content="En jaktopplevelse med Hans Martin – mer enn bare blod." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="hero">
+    <h1>Hans Martin – Jaktopplevelse</h1>
+  </section>
+
+  <section class="intro-image" id="intro">
+    <p>Med et rolig åndedrag, holder han pusten inne.<br>
+    Dyret er i siktet.<br>
+    Pust ut veldig rolig.<br>
+    Og skyt!</p>
+  </section>
+
+  <main>
+    <article class="reveal">
+      <h2>En uventet jeger</h2>
+      <p>Dette er Hans Martin. Han har drevet med jakt siden han var 18. Nå er han 23, og synes det er mer enn bare en hobby. Han gjør ikke dette bare fordi, men det er mer bak. Blodet strømmer gjennom hele kroppen, og man kjenner adrenalinet pumpe.</p>
+
+      <p>Hadde du sett han i andre klær, eller i en annen setting hadde du kanskje ikke sett for deg at han var jeger. Mange ser for seg en jeger som en som er høy, skummel og liker å drepe dyr. Hvordan er det egentlig for Hans Martin?</p>
+
+      <p>Vi ble med på jakt for å oppleve hvordan det foregår.</p>
+
+      <p>Klokka var 06.00, da var det opp og kle på seg ull, jakke og gode sko. Det var lyst ute, for sola hadde stått opp for ca. en halvtime siden. Vi kjørte til stedet vi skulle begynne jakten, og parkerte litt utenfor skogen. Det var vindstille og rolig ute. Ikke en lyd å høre, kun litt fuglekvitter i det fjerne.</p>
+
+      <p>Vi begynte ferden igjennom skogen, og stoppet opp litt ved et jorde vi kom til. “Hvis vi er helt stille nå, vil vi kanskje se noen duer”, sier han. Man følte at man ikke kunne puste engang nesten.</p>
+
+      <p>Vi fortsatte inn i skogen og hadde oppmerksomheten fullt på å følge med rundt oss, for plutselig kan det komme noe. Når vi hadde kommet et stykke satt vi oss ned og ventet. Det var for det meste skog rundt oss, men foran oss var det noe høyt gress med noen høye trær, så vi fikk en slags oversikt over et område om det skulle fly noen duer forbi.</p>
+
+      <p>Det var flere ganger vi så duer, men de var for langt unna til å ta et skudd.</p>
+
+      <p>Det som er med jakt er at det kan skje så mye forskjellig, så det handler mer om hele opplevelsen. Èn jakttur kan være at det ikke skjer så mye, og da er det været, roen i skogen, samværet, små dyr man møter som ekorn (bilde), godsaker man har tatt med osv. som blir turen. Andre ganger kan det være at man kommer helt tett innpå dyr, og da blir det skikkelig spennende.<br>
+      “Jeg kan bli litt skremt når jeg møter store dyr veldig brått.”<br>
+      Når man går rolig rundt i skogen og spaner etter dyr, og plutselig kommer det et dyr på skuddhold, da pumper hjertet.</p>
+
+      <p>Vi bestemte oss for å gå litt videre og kom til et flott naturlandskap med litt småskog her og der, store gressletter, og en stor innsjø, der dyrelivet var rikt. Det var mest småfugler som kvitret og fløy rundt, men vi fikk også øye på noen ender i vannkanten. (video)</p>
+
+      <p>Hans Martin tok et skremmeskudd for å forhåpentligvis få endene til å fly litt nærmere, og det fungerte. Han siktet mot de flyvende endene og tok et skudd til. Han traff. Det var en utrolig merkelig og spennende følelse. Han hadde nettopp skutt en and.</p>
+
+      <p><strong>Jakt er en opplevelse.</strong><br>
+      Det at man kan være sosial, får være ute i skogen, og spesielt når man møter dyr får man veldig adrenalin, forteller Hans Martin. Han mener at det egentlig ikke har så mye å si hvor tøff og sterk man er, for det handler i bunn og grunn om interesse.<br>
+      “I utgangspunktet trenger man ikke være glad i blod og sånn, det er ikke jeg.”</p>
+
+      <p>Jakt er ikke bare å felle dyr. På jakt må man ha det tankesettet at dyr er mat, det er ikke det samme som et kjæledyr, eller gårdsdyr f.eks. En annen hendelse kan være at et dyr er skadet, og da kan man hjelpe det, ved å ta det. Det er med andre ord ikke bare for egen glede, men det er så mye som kan utspille seg og være en del av saken.</p>
+
+      <p>Vi pakket sakene, og dro hjem til Hans Martin for å lage et fint måltid ut av anda. (bilde) Smaken av vilt kjøtt med poteter og tilbehør var en fin avslutning på denne turen.</p>
+
+      <p>Vi spurte om det var noe han ønsket at flere folk visste om jakt, dette var svaret hans:<br>
+      “Jakt for meg er ikke bare en hobby, men en måte jeg får være i naturen, tenne bål, drikke kaffe og få mange gode opplevelser.”</p>
+
+      <p>Vi har nå sett hva jakt er for Hans Martin og at den stereotypiske jegeren ikke er like ekte som mange tror. Jakt er mer enn bare blod.</p>
+    </article>
+  </main>
+
+  <script>
+    function revealOnScroll(){
+      const reveals=document.querySelectorAll('.reveal');
+      for(const el of reveals){
+        const rect=el.getBoundingClientRect();
+        if(rect.top < window.innerHeight-50 && rect.bottom > 50){
+          el.classList.add('visible');
+        } else {
+          el.classList.remove('visible');
+        }
+      }
+
+      const intro=document.querySelector('.intro-image');
+      const rect=intro.getBoundingClientRect();
+      if(rect.top < window.innerHeight-100 && rect.bottom > 100){
+        intro.classList.add('visible');
+      } else {
+        intro.classList.remove('visible');
+      }
+    }
+
+    function backgroundTransition(){
+      const scrollY = window.scrollY;
+      const heroHeight = document.querySelector('.hero').offsetHeight;
+      const transitionStart = heroHeight * 0.5;
+      const transitionEnd = heroHeight * 1.5;
+      let progress = (scrollY - transitionStart) / (transitionEnd - transitionStart);
+      progress = Math.max(0, Math.min(1, progress));
+      const bg = Math.floor(255 * progress);
+      const text = 255 - bg;
+      document.body.style.background = `rgb(${bg},${bg},${bg})`;
+      document.body.style.color = `rgb(${text},${text},${text})`;
+    }
+
+    window.addEventListener('scroll', () => {
+      revealOnScroll();
+      backgroundTransition();
+    });
+
+    window.addEventListener('load', () => {
+      revealOnScroll();
+      backgroundTransition();
+    });
+  </script>
+</body>
+</html>
